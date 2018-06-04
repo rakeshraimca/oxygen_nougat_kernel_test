@@ -1,0 +1,8 @@
+
+#!/bin/bash
+mkdir -p out
+make O=out clean
+make O=out mrproper
+make O=out hardrock_oxygen_defconfig
+make O=out -j$(nproc --all)
+
